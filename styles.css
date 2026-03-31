@@ -1,0 +1,145 @@
+/* =============================================
+   ZADANIE 2 – Stylowanie CV – Mykyta Pikus
+   Kolor przewodni: zielony (#2e8b57)
+   Krój pisma: Georgia + Verdana (inne niż domyślny Arial)
+   Marginesy/odstępy: margin i padding dla body i sekcji
+   Brak stylów inline w index.html
+   ============================================= */
+
+/* ── Zmienne CSS ── */
+:root {
+  --green:       #2e8b57;   /* kolor przewodni – Sea Green */
+  --green-dark:  #1e6040;
+  --green-light: #eaf5ee;
+  --text:        #333;
+  --text-muted:  #555;
+  --border:      #ccc;
+  --bg:          #f9f9f9;
+  --white:       #ffffff;
+}
+
+/* ── Body – krój pisma + marginesy ── */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* inny niż domyślny */
+  max-width: 800px;
+  margin: 40px auto;        /* margines górny/dolny + wyśrodkowanie */
+  padding: 0 20px;          /* odstęp boczny */
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ── Header ── */
+header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-bottom: 3px solid var(--green);   /* kolor przewodni */
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  background-color: var(--green-light);
+  padding: 20px 24px;
+  border-radius: 6px;
+}
+
+header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--green);          /* kolor przewodni */
+  background-color: var(--green-light);
+}
+
+header h1 {
+  font-family: Georgia, 'Times New Roman', serif; /* inny krój dla tytułu */
+  font-size: 2rem;
+  margin: 0 0 4px 0;
+  color: var(--green-dark);                /* kolor przewodni */
+}
+
+header p {
+  margin: 0;
+  color: var(--green);                     /* kolor przewodni */
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Nagłówki sekcji h2 ── */
+h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.2rem;
+  border-bottom: 2px solid var(--green);   /* kolor przewodni */
+  padding-bottom: 6px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--green-dark);                /* kolor przewodni */
+}
+
+/* ── Sekcje – odstępy ── */
+section {
+  margin-bottom: 28px;                     /* odstęp między sekcjami */
+  padding: 16px 18px;                      /* padding wewnętrzny */
+  background-color: var(--white);
+  border-radius: 6px;
+  border-left: 4px solid var(--green);     /* kolor przewodni */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+/* ── Linki ── */
+a {
+  color: var(--green);                     /* kolor przewodni */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--green-dark);
+}
+
+/* ── Listy ── */
+ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+ul li {
+  margin-bottom: 6px;
+}
+
+/* ── Artykuły (doświadczenie) ── */
+article {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--border);
+}
+
+article:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+article h3 {
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+  color: var(--green-dark);               /* kolor przewodni */
+}
+
+article p {
+  margin: 2px 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* ── Stopka ── */
+footer {
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+  padding-top: 14px;
+  font-size: 0.8rem;
+  color: #999;
+  text-align: center;
+}
