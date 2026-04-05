@@ -1,0 +1,118 @@
+/* ===== GREEN THEME ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Nunito:wght@400;600&display=swap');
+
+body {
+  font-family: 'Nunito', sans-serif;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background-color: #f0faf4;
+  color: #1a1a1a;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-bottom: 4px solid #27ae60;
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #e8f8ef;
+  border-radius: 12px;
+}
+
+header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid #27ae60;
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  margin: 0;
+  color: #1e8449;
+}
+
+header p {
+  color: #1e6e3c;
+  font-weight: 600;
+  margin: 6px 0 0 0;
+  font-size: 0.9rem;
+}
+
+h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #27ae60;
+  padding-bottom: 6px;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  color: #1e8449;
+}
+
+section {
+  margin-bottom: 24px;
+  background-color: #fff;
+  border: 1px solid #a9dfbf;
+  padding: 16px 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(39, 174, 96, 0.1);
+}
+
+a {
+  color: #1e8449;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+ul li::marker {
+  color: #27ae60;
+}
+
+article {
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  background-color: #f4fcf7;
+  border-radius: 6px;
+  border-left: 3px solid #27ae60;
+}
+
+article h3 {
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+article p {
+  margin: 2px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+footer {
+  border-top: 2px solid #a9dfbf;
+  margin-top: 40px;
+  padding-top: 14px;
+  font-size: 0.8rem;
+  color: #888;
+  text-align: center;
+  background-color: #e8f8ef;
+  padding: 14px 20px;
+  border-radius: 8px;
+}
