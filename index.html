@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mykyta Pikus – CV</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <img
+      src=""
+      alt="Zdjęcie profilowe Mykyty Pikusa"
+    />
+    <div>
+      <h1>Mykyta Pikus</h1>
+      <p>Student informatyki</p>
+    </div>
+    <button id="themeBtn" class="theme-btn">Motyw: Czerwony 🔴</button>
+  </header>
+
+  <main>
+
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <p>E-mail: <a href="mailto:mykyta.pikus@student.edu.pl">mykyta.pikus@student.edu.pl</a></p>
+      <p>Telefon: <a href="tel:+48123456789">+48 123 456 789</a></p>
+      <p>Miasto: Warszawa</p>
+      <p>
+        <a href="https://github.com/MPikus77426" target="_blank" rel="noopener noreferrer">GitHub</a>
+        &nbsp;|&nbsp;
+        <a href="https://linkedin.com/in/mykytapikus" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+    </section>
+
+    <section id="o-mnie">
+      <h2>O mnie</h2>
+      <p>
+        Jestem studentem pierwszego roku informatyki. Interesuję się tworzeniem stron
+        internetowych i programowaniem. Chętnie uczę się nowych technologii i rozwijam
+        swoje umiejętności.
+      </p>
+    </section>
+
+    <section id="umiejetnosci">
+      <div class="section-header">
+        <h2>Umiejętności</h2>
+        <button class="toggle-btn" data-target="umiejetnosci-body">Ukryj</button>
+      </div>
+      <div id="umiejetnosci-body">
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript (podstawy)</li>
+          <li>Python (podstawy)</li>
+          <li>Git i GitHub</li>
+          <li>Microsoft Office</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="doswiadczenie">
+      <div class="section-header">
+        <h2>Doświadczenie</h2>
+        <button class="toggle-btn" data-target="doswiadczenie-body">Ukryj</button>
+      </div>
+      <div id="doswiadczenie-body">
+        <article>
+          <h3>Pomoc techniczna – firma rodzinna</h3>
+          <p>2023 – 2024</p>
+          <p>Zarządzanie sprzętem komputerowym, instalacja oprogramowania, pomoc użytkownikom.</p>
+        </article>
+        <article>
+          <h3>Wolontariat – Szkolne Koło Informatyczne</h3>
+          <p>2022 – 2023</p>
+          <p>Organizacja warsztatów programistycznych dla uczniów szkół podstawowych.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="edukacja">
+      <h2>Edukacja</h2>
+      <p><strong>Akademia Finansów i Biznesu Vistula</strong> – Informatyka, I rok</p>
+      <p>2025 – obecnie</p>
+    </section>
+
+    <section id="projekty">
+      <div class="section-header">
+        <h2>Projekty</h2>
+        <button class="toggle-btn" data-target="projekty-body">Ukryj</button>
+      </div>
+      <div id="projekty-body">
+        <ul>
+          <li>
+            <strong>Strona CV (to CV)</strong> – pierwsza strona internetowa napisana w HTML i CSS.
+          </li>
+          <li>
+            <strong>Kalkulator w Pythonie</strong> – prosty program konsolowy do podstawowych działań matematycznych.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Wyrażam zgodę na przetwarzanie danych osobowych zawartych w niniejszym CV dla potrzeb niezbędnych do realizacji procesu rekrutacji.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
