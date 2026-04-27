@@ -1,0 +1,47 @@
+{
+  "name": "Mykyta Pikus",
+  "title": "Student informatyki",
+  "contact": {
+    "email": "mykyta.pikus@student.edu.pl",
+    "phone": "+48 123 456 789",
+    "city": "Warszawa",
+    "github": "https://github.com/MPikus77426",
+    "linkedin": "https://linkedin.com/in/mykytapikus"
+  },
+  "about": "Jestem studentem pierwszego roku informatyki. Interesuję się tworzeniem stron internetowych i programowaniem. Chętnie uczę się nowych technologii i rozwijam swoje umiejętności.",
+  "skills": [
+    "HTML",
+    "CSS",
+    "JavaScript (podstawy)",
+    "Python (podstawy)",
+    "Git i GitHub",
+    "Microsoft Office"
+  ],
+  "experience": [
+    {
+      "title": "Pomoc techniczna – firma rodzinna",
+      "period": "2023 – 2024",
+      "description": "Zarządzanie sprzętem komputerowym, instalacja oprogramowania, pomoc użytkownikom."
+    },
+    {
+      "title": "Wolontariat – Szkolne Koło Informatyczne",
+      "period": "2022 – 2023",
+      "description": "Organizacja warsztatów programistycznych dla uczniów szkół podstawowych."
+    }
+  ],
+  "education": {
+    "school": "Akademia Finansów i Biznesu Vistula",
+    "field": "Informatyka, I rok",
+    "period": "2025 – obecnie"
+  },
+  "projects": [
+    {
+      "name": "Strona CV (to CV)",
+      "description": "pierwsza strona internetowa napisana w HTML i CSS."
+    },
+    {
+      "name": "Kalkulator w Pythonie",
+      "description": "prosty program konsolowy do podstawowych działań matematycznych."
+    }
+  ]
+}
