@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mykyta Pikus – CV</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <img src="" alt="Zdjęcie profilowe" id="profile-img" />
+    <div>
+      <h1 id="header-name"></h1>
+      <p id="header-title"></p>
+    </div>
+    <button id="themeBtn" class="theme-btn">Motyw: Czerwony 🔴</button>
+  </header>
+  <main>
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <div id="kontakt-body"></div>
+    </section>
+    <section id="o-mnie">
+      <h2>O mnie</h2>
+      <p id="o-mnie-text"></p>
+    </section>
+    <section id="umiejetnosci">
+      <div class="section-header">
+        <h2>Umiejętności</h2>
+        <button class="toggle-btn" data-target="umiejetnosci-body">Ukryj</button>
+      </div>
+      <ul id="umiejetnosci-body"></ul>
+    </section>
+    <section id="doswiadczenie">
+      <div class="section-header">
+        <h2>Doświadczenie</h2>
+        <button class="toggle-btn" data-target="doswiadczenie-body">Ukryj</button>
+      </div>
+      <div id="doswiadczenie-body"></div>
+    </section>
+    <section id="edukacja">
+      <h2>Edukacja</h2>
+      <div id="edukacja-body"></div>
+    </section>
+    <section id="projekty">
+      <div class="section-header">
+        <h2>Projekty</h2>
+        <button class="toggle-btn" data-target="projekty-body">Ukryj</button>
+      </div>
+      <ul id="projekty-body"></ul>
+    </section>
+  </main>
+  <footer>
+    <p>Wyrażam zgodę na przetwarzanie danych osobowych zawartych w niniejszym CV dla potrzeb niezbędnych do realizacji procesu rekrutacji.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
