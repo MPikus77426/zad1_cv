@@ -1,0 +1,161 @@
+:root {
+  --green: #2e8b57; --green-dark: #1e6040; --green-light: #eaf5ee;
+  --text: #333; --text-muted: #555; --border: #ccc; --bg: #f9f9f9; --white: #ffffff;
+  --accent: var(--green); --accent-dark: var(--green-dark); --accent-light: var(--green-light);
+}
+body.theme-red { --accent: #c0392b; --accent-dark: #7f1f18; --accent-light: #fdf0ee; --bg: #fdf8f7; }
+body { font-family: Verdana, Geneva, Tahoma, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; background-color: var(--bg); color: var(--text); line-height: 1.6; transition: background-color .35s; }
+header { display: flex; align-items: center; gap: 24px; border-bottom: 3px solid var(--accent); padding: 20px 24px; margin-bottom: 30px; background-color: var(--accent-light); border-radius: 6px; transition: background-color .35s, border-color .35s; }
+header img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); background-color: var(--accent-light); }
+header h1 { font-family: Georgia, serif; font-size: 2rem; margin: 0 0 4px 0; color: var(--accent-dark); }
+header p { margin: 0; color: var(--accent); font-weight: bold; font-size: 0.95rem; text-transform: uppercase; }
+.theme-btn { margin-left: auto; padding: .5rem 1rem; background-color: var(--accent); color: #fff; border: none; border-radius: 6px; font-family: Verdana, sans-serif; font-size: .82rem; cursor: pointer; white-space: nowrap; transition: background-color .35s; }
+h2 { font-family: Georgia, serif; font-size: 1.2rem; border-bottom: 2px solid var(--accent); padding-bottom: 6px; margin-top: 0; margin-bottom: 12px; color: var(--accent-dark); }
+section { margin-bottom: 28px; padding: 16px 18px; background-color: var(--white); border-radius: 6px; border-left: 4px solid var(--accent); box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.section-header h2 { margin-bottom: 0; border-bottom: none; padding-bottom: 0; }
+.toggle-btn { padding: .28rem .75rem; background-color: var(--accent); color: #fff; border: none; border-radius: 5px; font-size: .78rem; cursor: pointer; }
+.hidden { display: none; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; color: var(--accent-dark); }
+ul { padding-left: 20px; margin: 0; }
+ul li { margin-bottom: 6px; }
+article { margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px dashed var(--border); }
+article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+article h3 { margin: 0 0 4px 0; font-size: 1rem; color: var(--accent-dark); }
+article p { margin: 2px 0; font-size: 0.95rem; color: var(--text-muted); }
+footer { border-top: 1px solid var(--border); margin-top: 40px; padding-top: 14px; font-size: 0.8rem; color: #999; text-align: center; }
+
+/* ================================================================
+   ZADANIE 7 – Local Storage – style sekcji notatek
+   ================================================================ */
+
+#notatki { border-left-color: var(--accent); }
+
+#notes-counter {
+  font-size: 0.9rem;
+  font-family: Verdana, sans-serif;
+  color: var(--accent);
+  font-weight: normal;
+}
+
+/* Formularz dodawania */
+.notes-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.notes-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-family: Verdana, sans-serif;
+  font-size: 0.9rem;
+  color: var(--text);
+  background: var(--bg);
+  transition: border-color .2s;
+  outline: none;
+}
+
+.notes-input:focus {
+  border-color: var(--accent);
+}
+
+.notes-add-btn {
+  padding: 8px 18px;
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-family: Verdana, sans-serif;
+  font-size: 0.88rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color .2s;
+}
+
+.notes-add-btn:hover {
+  background-color: var(--accent-dark);
+}
+
+/* Komunikat po dodaniu/usunięciu */
+.notes-info {
+  font-size: 0.8rem;
+  color: var(--accent-dark);
+  margin: 0 0 8px 0;
+  min-height: 1.2em;
+  transition: opacity 0.4s;
+}
+
+/* Pusta lista */
+.notes-empty {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin: 4px 0 10px 0;
+  font-style: italic;
+}
+
+/* Lista notatek */
+.notes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px 0;
+}
+
+.note-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  background-color: var(--accent-light);
+  border-radius: 5px;
+  border-left: 3px solid var(--accent);
+  transition: background-color .2s;
+}
+
+.note-item:last-child { margin-bottom: 0; }
+
+.note-text {
+  font-size: 0.9rem;
+  color: var(--text);
+  flex: 1;
+  word-break: break-word;
+}
+
+/* 4. Możliwość usunięcia elementu */
+.note-delete-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: #999;
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 2px 7px;
+  flex-shrink: 0;
+  transition: color .15s, border-color .15s;
+}
+
+.note-delete-btn:hover {
+  color: #c0392b;
+  border-color: #c0392b;
+}
+
+/* Podpis techniczny */
+.notes-hint {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin: 0;
+  border-top: 1px dashed var(--border);
+  padding-top: 8px;
+}
+
+.notes-hint code {
+  background: #f0f0f0;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.72rem;
+}
