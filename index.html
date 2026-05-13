@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mykyta Pikus – CV</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <img src="" alt="Zdjęcie profilowe" id="profile-img" />
+    <div>
+      <h1 id="header-name"></h1>
+      <p id="header-title"></p>
+    </div>
+    <button id="themeBtn" class="theme-btn">Motyw: Czerwony 🔴</button>
+  </header>
+  <main>
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <div id="kontakt-body"></div>
+    </section>
+    <section id="o-mnie">
+      <h2>O mnie</h2>
+      <p id="o-mnie-text"></p>
+    </section>
+    <section id="umiejetnosci">
+      <div class="section-header">
+        <h2>Umiejętności</h2>
+        <button class="toggle-btn" data-target="umiejetnosci-body">Ukryj</button>
+      </div>
+      <ul id="umiejetnosci-body"></ul>
+    </section>
+    <section id="doswiadczenie">
+      <div class="section-header">
+        <h2>Doświadczenie</h2>
+        <button class="toggle-btn" data-target="doswiadczenie-body">Ukryj</button>
+      </div>
+      <div id="doswiadczenie-body"></div>
+    </section>
+    <section id="edukacja">
+      <h2>Edukacja</h2>
+      <div id="edukacja-body"></div>
+    </section>
+    <section id="projekty">
+      <div class="section-header">
+        <h2>Projekty</h2>
+        <button class="toggle-btn" data-target="projekty-body">Ukryj</button>
+      </div>
+      <ul id="projekty-body"></ul>
+    </section>
+
+    <!-- ============================================================
+         ZADANIE 7 – Local Storage
+         Cel: Zapisywanie danych w przeglądarce bez użycia backendu.
+         ============================================================ -->
+    <section id="notatki">
+      <div class="section-header">
+        <h2>Moje notatki <span id="notes-counter"></span></h2>
+        <button class="toggle-btn" data-target="notatki-body">Ukryj</button>
+      </div>
+      <div id="notatki-body">
+        <form id="notes-form" class="notes-form">
+          <input
+            type="text"
+            id="notes-input"
+            class="notes-input"
+            placeholder="Wpisz notatkę i naciśnij Enter lub kliknij Dodaj…"
+            maxlength="200"
+            autocomplete="off"
+          />
+          <button type="submit" class="notes-add-btn">Dodaj</button>
+        </form>
+        <p id="notes-info" class="notes-info"></p>
+        <p id="notes-empty" class="notes-empty" style="display:none;">
+          Brak notatek – dodaj pierwszą! Dane są zapisywane w <code>localStorage</code>.
+        </p>
+        <ul id="notes-list" class="notes-list"></ul>
+        <p class="notes-hint">
+          💾 Dane zapisywane w <code>localStorage</code> pod kluczem <code>"cv_notatki"</code>
+          – przeżywają odświeżenie strony.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ZADANIE 8 – Backend
+         Cel: Wysyłanie danych formularza metodą POST do serwera
+         i zapis poza przeglądarką (plik wiadomosci.json).
+         ============================================================ -->
+    <section id="wiadomosc">
+      <div class="section-header">
+        <h2>Zostaw wiadomość <span id="msg-counter"></span></h2>
+        <button class="toggle-btn" data-target="wiadomosc-body">Ukryj</button>
+      </div>
+
+      <div id="wiadomosc-body">
+        <!-- 1. Wysłanie danych formularza metodą POST -->
+        <form id="msg-form" class="msg-form">
+          <div class="msg-row">
+            <div class="msg-field">
+              <label for="msg-imie">Imię i nazwisko</label>
+              <input
+                type="text"
+                id="msg-imie"
+                name="imie"
+                placeholder="Jan Kowalski"
+                maxlength="100"
+                required
+              />
+            </div>
+            <div class="msg-field">
+              <label for="msg-email">E-mail</label>
+              <input
+                type="email"
+                id="msg-email"
+                name="email"
+                placeholder="jan@example.com"
+                required
+              />
+            </div>
+          </div>
+          <div class="msg-field">
+            <label for="msg-tresc">Wiadomość</label>
+            <textarea
+              id="msg-tresc"
+              name="wiadomosc"
+              placeholder="Napisz coś…"
+              maxlength="500"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <div class="msg-footer">
+            <button type="submit" id="msg-submit-btn" class="msg-send-btn">
+              Wyślij wiadomość →
+            </button>
+          </div>
+        </form>
+
+        <!-- 3. Potwierdzenie poprawnego wysłania danych -->
+        <div id="msg-status" class="msg-status" style="display:none;"></div>
+
+        <!-- Lista nadesłanych wiadomości (odczyt z serwera) -->
+        <div id="msg-list-wrap" style="display:none;">
+          <h3 class="msg-list-title">Nadesłane wiadomości (z serwera):</h3>
+          <ul id="msg-list" class="msg-list"></ul>
+        </div>
+
+        <p class="msg-hint">
+          🌐 Dane wysyłane przez <code>fetch()</code> metodą <code>POST</code>
+          do <code>http://localhost:3000/wyslij</code> i zapisywane w pliku
+          <code>wiadomosci.json</code> na serwerze.
+        </p>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <p>Wyrażam zgodę na przetwarzanie danych osobowych zawartych w niniejszym CV dla potrzeb niezbędnych do realizacji procesu rekrutacji.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
